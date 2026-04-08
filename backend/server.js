@@ -200,14 +200,6 @@ io.on('connection', (socket) => {
       session.hostSocketId = socket.id;
     }
 
-    if (session.hostSocketId !== socket.id) {
-      socket.emit('groupTimer:error', {
-        roomId,
-        message: 'Only the host can start the timer.',
-      });
-      return;
-    }
-
     session.isRunning = true;
     session.updatedAt = Date.now();
     timerSessions.set(roomId, session);
@@ -236,14 +228,6 @@ io.on('connection', (socket) => {
       session.hostSocketId = socket.id;
     }
 
-    if (session.hostSocketId !== socket.id) {
-      socket.emit('groupTimer:error', {
-        roomId,
-        message: 'Only the host can reset the timer.',
-      });
-      return;
-    }
-
     session.isRunning = false;
     session.phase = 'focus';
     session.breakMode = 'short';
@@ -260,14 +244,6 @@ io.on('connection', (socket) => {
 
     if (!session.hostSocketId) {
       session.hostSocketId = socket.id;
-    }
-
-    if (session.hostSocketId !== socket.id) {
-      socket.emit('groupTimer:error', {
-        roomId,
-        message: 'Only the host can update timer durations.',
-      });
-      return;
     }
 
     const focusMinutes = Math.max(1, Math.min(180, Number(payload.focusMinutes) || 25));
@@ -293,14 +269,6 @@ io.on('connection', (socket) => {
       session.hostSocketId = socket.id;
     }
 
-    if (session.hostSocketId !== socket.id) {
-      socket.emit('groupTimer:error', {
-        roomId,
-        message: 'Only the host can change timer mode.',
-      });
-      return;
-    }
-
     const mode = String(payload.mode || 'focus').trim().toLowerCase();
     session.isRunning = false;
 
@@ -318,6 +286,18 @@ io.on('connection', (socket) => {
       session.remainingSeconds = session.focusSeconds;
     }
 
+    session.updatedAt = Date.now();
+    stopTimerInterval(session);
+    timerSessions.set(roomId, session);
+    emitTimerState(roomId);
+  });
+
+  socket.on('groupTimer:claimHost', (payload = {}) => {
+    const roomId = sanitizeRoomId(payload.roomId || socket.data.timerRoomId || 'study-room');
+    const session = timerSessions.get(roomId) || createDefaultTimerSession(socket.id);
+
+    session.hostSocketId = socket.id;
+    session.isRunning = false;
     session.updatedAt = Date.now();
     stopTimerInterval(session);
     timerSessions.set(roomId, session);

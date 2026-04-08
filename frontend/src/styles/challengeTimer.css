@@ -1,0 +1,63 @@
+.challenge-page {
+  position: relative;
+  overflow: hidden;
+}
+
+.challenge-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1000px 500px at 10% -10%, rgba(157, 255, 226, 0.35), transparent 60%),
+    radial-gradient(900px 500px at 90% 0%, rgba(135, 186, 255, 0.3), transparent 60%),
+    linear-gradient(180deg, #e9fff7 0%, #f6fbff 40%, #f1fff6 100%);
+  z-index: 0;
+}
+
+.challenge-dew-layer {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.challenge-dew-drop {
+  position: absolute;
+  top: -20%;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.95), rgba(138, 201, 255, 0.55) 60%, rgba(123, 183, 255, 0.08) 100%);
+  filter: blur(0.15px);
+  box-shadow: 0 0 18px rgba(100, 173, 255, 0.25);
+  animation-name: dew-drop-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.challenge-shell {
+  position: relative;
+  z-index: 2;
+}
+
+.challenge-glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(123, 152, 182, 0.2);
+}
+
+@keyframes dew-drop-fall {
+  0% {
+    transform: translate3d(0, -12vh, 0) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.75;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate3d(0, 120vh, 0) scale(1.05);
+    opacity: 0;
+  }
+}

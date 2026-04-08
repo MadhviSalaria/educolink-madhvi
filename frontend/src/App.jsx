@@ -44,7 +44,8 @@ function App() {
         <Route path="/wellwisher/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/wellwisher/register" element={<Register />} />
-        <Route path="/group-timer" element={<Layout><GroupTimer /></Layout>} />
+        <Route path="/challenge-timer" element={<Layout><GroupTimer /></Layout>} />
+        <Route path="/group-timer" element={<Navigate to="/challenge-timer" replace />} />
         <Route
           path="*"
           element={

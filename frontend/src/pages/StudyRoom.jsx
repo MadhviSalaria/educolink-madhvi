@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { useMemo, useState, useEffect } from 'react';
 import {
   IoPeopleOutline, IoChatbubblesOutline, IoDocumentTextOutline,
   IoEaselOutline, IoShareSocialOutline, IoTimerOutline,
   IoAddOutline, IoVideocamOutline
 } from 'react-icons/io5';
 import { FloatingParticles, GradientMesh, IllustrationNetwork } from '../components/SVGBackgrounds/SVGBackgrounds';
-import { useGroupTimer } from '../context/GroupTimerContext';
 
 const container = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.1 } } };
 const item = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } };
@@ -18,57 +16,7 @@ const rooms = [
   { name: 'CS Algorithms', members: 8, active: false },
 ];
 
-function formatCountdown(totalSeconds) {
-  const safe = Math.max(0, Number.isFinite(totalSeconds) ? Math.floor(totalSeconds) : 0);
-  const minutes = String(Math.floor(safe / 60)).padStart(2, '0');
-  const seconds = String(safe % 60).padStart(2, '0');
-  return `${minutes}:${seconds}`;
-}
-
 export default function StudyRoom() {
-  const {
-    connected,
-    roomId,
-    timer,
-    error,
-    isHost,
-    joinRoom,
-    startTimer,
-    pauseTimer,
-    resetTimer,
-  } = useGroupTimer();
-  const [roomInput, setRoomInput] = useState(roomId);
-  const [joinMessage, setJoinMessage] = useState('');
-  const [showRoomSection, setShowRoomSection] = useState(false);
-
-  const phaseLabel = useMemo(() => (timer.phase === 'break' ? 'Break' : 'Focus'), [timer.phase]);
-
-  useEffect(() => {
-    setRoomInput(roomId);
-  }, [roomId]);
-
-  useEffect(() => {
-    const savedRoom = localStorage.getItem('groupTimerRoom');
-    if (savedRoom && String(savedRoom).trim()) {
-      setShowRoomSection(true);
-      setJoinMessage('Joined successfully');
-    }
-  }, []);
-
-  const handleJoinRoom = () => {
-    const enteredRoom = String(roomInput || '').trim();
-    if (!enteredRoom) {
-      alert('Please enter a room name.');
-      setJoinMessage('Room name cannot be empty.');
-      return;
-    }
-
-    joinRoom(enteredRoom);
-    localStorage.setItem('groupTimerRoom', enteredRoom);
-    setShowRoomSection(true);
-    setJoinMessage('Joined successfully');
-  };
-
   const illustrations = [
     <IoChatbubblesOutline key="0" />,
     <IoEaselOutline key="1" />,
@@ -185,65 +133,27 @@ export default function StudyRoom() {
           <div className="feature-card-header">
             <div className="feature-card-icon" style={{ background: 'rgba(242,138,55,0.15)', color: '#f28a37' }}><IoTimerOutline /></div>
             <div>
-              <div className="feature-card-title">Group Timer</div>
-              <div className="feature-card-subtitle">Same layout + synced controls in Study Room</div>
+              <div className="feature-card-title">Challenge Timer</div>
+              <div className="feature-card-subtitle">Personal focus timer with immersive visual effects</div>
             </div>
           </div>
 
           <div className="feature-card-body" style={{ paddingTop: '0.7rem' }}>
-            <div className="feature-item" style={{ justifyContent: 'space-between' }}>
+            <div className="feature-item">
               <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
                 <div className="feature-item-icon" style={{ background: 'rgba(180,19,64,0.1)', color: '#b41340' }}><IoTimerOutline /></div>
-                <span>Synced Pomodoro timer</span>
+                <span>Personal challenge flow with animated dew-drop background</span>
               </div>
-              <span className={`status-badge ${connected ? 'status-online' : 'status-busy'}`}>{connected ? 'Live' : 'Offline'}</span>
             </div>
 
             <div style={{ marginTop: '0.8rem', display: 'flex', justifyContent: 'flex-start' }}>
-              <Link to="/group-timer" className="btn-primary" style={{ minWidth: '170px', textDecoration: 'none', textAlign: 'center' }}>
-                Open Group Timer
+              <Link to="/challenge-timer" className="btn-primary" style={{ minWidth: '190px', textDecoration: 'none', textAlign: 'center' }}>
+                Open Challenge Timer
               </Link>
             </div>
 
-            <div style={{ marginTop: 'var(--space-4)', display: 'grid', gap: '0.85rem' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '0.6rem' }}>
-                <input
-                  id="roomInput"
-                  value={roomInput}
-                  onChange={(event) => setRoomInput(event.target.value)}
-                  placeholder="Enter Room Code"
-                  style={{ borderRadius: '12px', border: '1px solid #d7dbe3', padding: '0.65rem 0.8rem', background: '#fff' }}
-                />
-                <button className="btn-secondary" style={{ minWidth: '88px' }} onClick={handleJoinRoom}>Join</button>
-              </div>
-
-              {joinMessage && <div style={{ fontSize: '0.82rem', color: '#065f46', fontWeight: 700 }}>{joinMessage}</div>}
-
-              <div id="roomSection" style={{
-                borderRadius: '16px',
-                padding: '0.9rem',
-                background: 'rgba(180,19,64,0.08)',
-                border: '1px solid rgba(180,19,64,0.15)',
-                display: showRoomSection ? 'flex' : 'none',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                gap: '0.8rem',
-              }}>
-                <div>
-                  <div style={{ fontSize: '0.82rem', color: '#6e7282', fontWeight: 700, textTransform: 'uppercase' }}>Room Code</div>
-                  <div id="roomName" style={{ fontSize: '1rem', fontWeight: 700, color: '#933c5f' }}>{roomId.toUpperCase()}</div>
-                  <div style={{ marginTop: '0.2rem', color: '#6e7282' }}>Phase: <strong style={{ color: '#933c5f' }}>{phaseLabel}</strong></div>
-                </div>
-                <div style={{ fontSize: '2rem', fontWeight: 800, color: '#b41340', letterSpacing: '0.03em' }}>{formatCountdown(timer.remainingSeconds)}</div>
-              </div>
-
-              <div style={{ display: 'flex', gap: '0.55rem', flexWrap: 'wrap' }}>
-                <button className="btn-primary" style={{ minWidth: '128px' }} disabled={!isHost} onClick={startTimer}>Start {isHost ? '(Host)' : ''}</button>
-                <button className="btn-secondary" style={{ minWidth: '96px' }} onClick={pauseTimer}>Pause</button>
-                <button className="btn-secondary" style={{ minWidth: '96px' }} disabled={!isHost} onClick={resetTimer}>Reset</button>
-              </div>
-
-              {error && <div style={{ fontSize: '0.8rem', color: '#b91c1c', fontWeight: 600 }}>{error}</div>}
+            <div style={{ marginTop: 'var(--space-4)', fontSize: '0.92rem', color: 'var(--outline)' }}>
+              Build your own focus challenge, select phase, and watch dynamic rain-like dew effects increase as the timer progresses.
             </div>
           </div>
         </motion.div>

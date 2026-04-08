@@ -176,6 +176,13 @@ export function GroupTimerProvider({ children }) {
     });
   }, [roomId]);
 
+  const claimHost = useCallback(() => {
+    setError('');
+    socketRef.current?.emit('groupTimer:claimHost', {
+      roomId,
+    });
+  }, [roomId]);
+
   const value = useMemo(() => ({
     connected,
     socketId,
@@ -189,7 +196,8 @@ export function GroupTimerProvider({ children }) {
     resetTimer,
     setTimerDurations,
     setTimerMode,
-  }), [connected, socketId, roomId, timer, error, joinRoom, startTimer, pauseTimer, resetTimer, setTimerDurations, setTimerMode]);
+    claimHost,
+  }), [connected, socketId, roomId, timer, error, joinRoom, startTimer, pauseTimer, resetTimer, setTimerDurations, setTimerMode, claimHost]);
 
   return (
     <GroupTimerContext.Provider value={value}>

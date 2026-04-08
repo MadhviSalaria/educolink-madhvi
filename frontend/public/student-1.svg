@@ -1,0 +1,95 @@
+<svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-12px); }
+      }
+      .student-float { animation: float 3s ease-in-out infinite; }
+    </style>
+    <linearGradient id="skinTone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5d5b8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#eec8a8;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="headGlow" cx="50%" cy="30%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <g class="student-float">
+    <!-- Desktop base shadow -->
+    <ellipse cx="100" cy="260" rx="50" ry="14" fill="#00000018" />
+    
+    <!-- Desk table -->
+    <rect x="40" y="200" width="120" height="60" rx="8" fill="#d4a574" 
+          style="filter: drop-shadow(8px 16px 24px rgba(87, 77, 179, 0.18));" />
+    <rect x="42" y="202" width="116" height="20" rx="6" fill="#e8b87a" />
+    
+    <!-- Large stack of books on desk -->
+    <rect x="55" y="150" width="35" height="55" rx="4" fill="#e74c3c" 
+          style="filter: drop-shadow(6px 10px 16px rgba(87, 77, 179, 0.2));" />
+    <line x1="55" y1="170" x2="90" y2="170" stroke="#c0392b" stroke-width="1.5" />
+    <line x1="55" y1="185" x2="90" y2="185" stroke="#c0392b" stroke-width="1.5" />
+    <line x1="55" y1="200" x2="90" y2="200" stroke="#c0392b" stroke-width="1.5" />
+    
+    <!-- Notebook on desk -->
+    <rect x="110" y="165" width="30" height="45" rx="3" fill="#3498db" 
+          style="filter: drop-shadow(4px 8px 12px rgba(52, 152, 219, 0.2));" />
+    <rect x="112" y="167" width="26" height="11" fill="#2980b9" opacity="0.7" />
+    <circle cx="125" cy="175" r="2" fill="#ecf0f1" opacity="0.5" />
+    <circle cx="125" cy="182" r="2" fill="#ecf0f1" opacity="0.5" />
+    
+    <!-- Body/torso -->
+    <rect x="65" y="110" width="70" height="95" rx="20" fill="#9b59b6" 
+          style="filter: drop-shadow(10px 14px 20px rgba(87, 77, 179, 0.22));" />
+    <rect x="67" y="112" width="66" height="25" rx="15" fill="#af7ac5" opacity="0.8" />
+    
+    <!-- Collar -->
+    <ellipse cx="100" cy="125" rx="32" ry="8" fill="#8e44ad" />
+    
+    <!-- Right arm extended -->
+    <ellipse cx="145" cy="140" rx="14" ry="45" fill="#f5d5b8" transform="rotate(35 145 140)"
+             style="filter: drop-shadow(8px 10px 14px rgba(87, 77, 179, 0.15));" />
+    
+    <!-- Right hand -->
+    <circle cx="155" cy="170" r="12" fill="#f5d5b8" style="filter: drop-shadow(4px 6px 10px rgba(0, 0, 0, 0.1));" />
+    
+    <!-- Left arm -->
+    <ellipse cx="55" cy="140" rx="14" ry="45" fill="#f5d5b8" transform="rotate(-35 55 140)"
+             style="filter: drop-shadow(8px 10px 14px rgba(87, 77, 179, 0.15));" />
+    
+    <!-- Left hand -->
+    <circle cx="45" cy="170" r="12" fill="#f5d5b8" style="filter: drop-shadow(4px 6px 10px rgba(0, 0, 0, 0.1));" />
+    
+    <!-- Head -->
+    <circle cx="100" cy="75" r="40" fill="url(#skinTone)"
+            style="filter: drop-shadow(12px 14px 26px rgba(87, 77, 179, 0.25));" />
+    <circle cx="100" cy="75" r="40" fill="url(#headGlow)" />
+    
+    <!-- Hair -->
+    <path d="M 60 65 Q 45 45 50 25 Q 60 10 100 8 Q 140 10 150 25 Q 155 45 140 65 Z" fill="#2c1810"
+          style="filter: drop-shadow(6px 8px 14px rgba(0, 0, 0, 0.15));" />
+    
+    <!-- Hair highlights -->
+    <ellipse cx="75" cy="35" rx="8" ry="12" fill="#4a2f1a" opacity="0.6" />
+    <ellipse cx="125" cy="35" rx="8" ry="12" fill="#4a2f1a" opacity="0.6" />
+    
+    <!-- Eyes focused -->
+    <circle cx="85" cy="70" r="5" fill="#1a1a1a" />
+    <circle cx="115" cy="70" r="5" fill="#1a1a1a" />
+    <circle cx="87" cy="68" r="2.2" fill="white" />
+    <circle cx="117" cy="68" r="2.2" fill="white" />
+    
+    <!-- Concentrated expression -->
+    <line x1="82" y1="85" x2="118" y2="85" stroke="#8b6b3d" stroke-width="1.5" stroke-linecap="round" />
+    <path d="M 90 92 Q 100 95 110 92" stroke="#d4a574" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5" />
+    
+    <!-- Nose -->
+    <line x1="100" y1="68" x2="100" y2="82" stroke="#d4a574" stroke-width="1.5" />
+    
+    <!-- Focus indicators - sparkles -->
+    <circle cx="130" cy="55" r="3" fill="#ffd700" opacity="0.7" />
+    <circle cx="70" cy="55" r="3" fill="#ffd700" opacity="0.7" />
+  </g>
+</svg>

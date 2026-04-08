@@ -1,0 +1,49 @@
+services:
+  - type: web
+    name: educolink-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    envVars:
+      - key: PORT
+        value: 5001
+      - key: MONGODB_DB
+        value: educolink
+      - key: GROK_MODEL
+        value: llama-3.1-8b-instant
+      - key: RAZORPAY_CURRENCY
+        value: INR
+      - key: RAZORPAY_PREMIUM_MONTHLY_AMOUNT
+        value: 50
+      - key: RAZORPAY_PREMIUM_YEARLY_AMOUNT
+        value: 500
+      - key: JWT_SECRET
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: SERPER_API_KEY
+        sync: false
+      - key: GOOGLE_CSE_API_KEY
+        sync: false
+      - key: GOOGLE_CSE_CX
+        sync: false
+      - key: GROK_API_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+      - key: FRONTEND_APP_URL
+        sync: false
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_PHONE_NUMBER
+        sync: false
+      - key: TWILIO_FLOW_SID
+        sync: false

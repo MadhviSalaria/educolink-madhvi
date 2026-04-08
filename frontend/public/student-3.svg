@@ -1,0 +1,111 @@
+<svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-12px); }
+      }
+      @keyframes spin {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(5deg); }
+      }
+      @keyframes sparkle {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; }
+      }
+      .student-float { animation: float 3.4s ease-in-out infinite; }
+      .spin-obj { animation: spin 2s ease-in-out infinite; }
+      .sparkle { animation: sparkle 1.5s ease-in-out infinite; }
+    </style>
+    <linearGradient id="skinTone3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5d5b8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#eec8a8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shirtGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffb3d9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff99c8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <g class="student-float">
+    <!-- Shadow -->
+    <ellipse cx="100" cy="260" rx="50" ry="14" fill="#00000017" />
+    
+    <!-- Trophy/Achievement in hand -->
+    <g class="spin-obj" style="transform-origin: 100px 160px;">
+      <!-- Trophy base -->
+      <rect x="85" y="175" width="30" height="8" rx="3" fill="#f39c12" 
+            style="filter: drop-shadow(4px 6px 12px rgba(243, 156, 18, 0.3));" />
+      <!-- Trophy stem -->
+      <rect x="96" y="140" width="8" height="35" rx="2" fill="#f39c12" 
+            style="filter: drop-shadow(3px 5px 10px rgba(243, 156, 18, 0.25));" />
+      <!-- Trophy cup -->
+      <path d="M 82 140 Q 75 125 82 115 L 118 115 Q 125 125 118 140 Z" fill="#ffc107"
+            style="filter: drop-shadow(6px 8px 14px rgba(243, 156, 18, 0.3));" />
+      <!-- Trophy shine -->
+      <ellipse cx="92" cy="125" rx="6" ry="8" fill="#ffeb3b" opacity="0.5" />
+    </g>
+    
+    <!-- Body - energetic posture -->
+    <rect x="58" y="115" width="84" height="88" rx="24" fill="#ff99c8" 
+          style="filter: drop-shadow(12px 16px 24px rgba(255, 152, 200, 0.22));" />
+    <rect x="60" y="117" width="80" height="30" rx="18" fill="#ff85bf" opacity="0.8" />
+    
+    <!-- Decorative chest element -->
+    <circle cx="100" cy="135" r="6" fill="#ff6ba6" opacity="0.6" />
+    
+    <!-- Left arm raised high -->
+    <ellipse cx="45" cy="125" rx="15" ry="52" fill="#f5d5b8" transform="rotate(-50 45 125)"
+             style="filter: drop-shadow(10px 12px 18px rgba(255, 152, 200, 0.18));" />
+    
+    <!-- Right arm raised high -->
+    <ellipse cx="155" cy="125" rx="15" ry="52" fill="#f5d5b8" transform="rotate(50 155 125)"
+             style="filter: drop-shadow(10px 12px 18px rgba(255, 152, 200, 0.18));" />
+    
+    <!-- Hands up in victory -->
+    <circle cx="28" cy="95" r="14" fill="#f5d5b8" style="filter: drop-shadow(6px 8px 14px rgba(0, 0, 0, 0.12));" />
+    <circle cx="172" cy="95" r="14" fill="#f5d5b8" style="filter: drop-shadow(6px 8px 14px rgba(0, 0, 0, 0.12));" />
+    
+    <!-- Stars around hands -->
+    <circle cx="20" cy="80" r="3.5" fill="#ffd700" class="sparkle" />
+    <circle cx="180" cy="80" r="3.5" fill="#ffd700" class="sparkle" />
+    <circle cx="15" cy="100" r="2.5" fill="#ffeb3b" opacity="0.7" class="sparkle" />
+    <circle cx="185" cy="100" r="2.5" fill="#ffeb3b" opacity="0.7" class="sparkle" />
+    
+    <!-- Head -->
+    <circle cx="100" cy="75" r="43" fill="#f5d5b8"
+            style="filter: drop-shadow(14px 16px 30px rgba(255, 152, 200, 0.24));" />
+    
+    <!-- Hair -->
+    <ellipse cx="100" cy="40" rx="48" ry="38" fill="#3d2a1a"
+             style="filter: drop-shadow(8px 10px 18px rgba(0, 0, 0, 0.16));" />
+    
+    <!-- Hair curls/texture -->
+    <circle cx="68" cy="28" r="10" fill="#5a3f2a" opacity="0.6" />
+    <circle cx="132" cy="28" r="10" fill="#5a3f2a" opacity="0.6" />
+    <circle cx="75" cy="18" r="8" fill="#6b4a2f" opacity="0.4" />
+    <circle cx="125" cy="18" r="8" fill="#6b4a2f" opacity="0.4" />
+    
+    <!-- Eyes - happy and bright -->
+    <circle cx="82" cy="70" r="6" fill="#1a1a1a" />
+    <circle cx="118" cy="70" r="6" fill="#1a1a1a" />
+    <!-- Eye sparkles -->
+    <circle cx="85" cy="67" r="2.8" fill="#ffff99" />
+    <circle cx="121" cy="67" r="2.8" fill="#ffff99" />
+    
+    <!-- Happy expression with closed eyes -->
+    <path d="M 80 68 Q 82 76 85 75" stroke="#8b6b3d" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7" />
+    <path d="M 120 68 Q 118 76 115 75" stroke="#8b6b3d" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7" />
+    
+    <!-- Big smile -->
+    <path d="M 80 82 Q 100 92 120 82" stroke="#d4a574" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <line x1="85" y1="86" x2="115" y2="86" stroke="#ffccaa" stroke-width="1" opacity="0.5" />
+    
+    <!-- Nose -->
+    <line x1="100" y1="67" x2="100" y2="80" stroke="#d4a574" stroke-width="1.5" />
+    
+    <!-- Achievement aura -->
+    <circle cx="100" cy="75" r="50" fill="none" stroke="#ffd700" stroke-width="2" opacity="0.25" />
+    <circle cx="100" cy="75" r="58" fill="none" stroke="#ffb300" stroke-width="1" opacity="0.15" class="sparkle" />
+  </g>
+</svg>

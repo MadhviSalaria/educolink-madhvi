@@ -1,0 +1,623 @@
+{
+  "users": [
+    {
+      "id": "usr_cb3e1589-4ed1-4d52-9782-8e0f9a695ee8",
+      "name": "Shub Demo",
+      "email": "shub.demo@example.com",
+      "passwordHash": "$2a$10$N/DvBEg5s/SXl6LYdm.p/OW8DIRKnBdsZ2x9m8c2Iy8yDx/cjJHJu",
+      "authProvider": "local",
+      "createdAt": "2026-03-25T11:08:14.170Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false
+      }
+    },
+    {
+      "id": "usr_e40ef359-927c-4206-ad57-f0e5b2abfcc7",
+      "name": "shubham saurav",
+      "email": "shubsaurav1710@gmail.com",
+      "authProvider": "google",
+      "createdAt": "2026-03-28T11:49:50.881Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false,
+        "managedFocus": {
+          "status": "idle",
+          "durationMinutes": 45,
+          "pin": null,
+          "startedAt": null,
+          "updatedAt": null,
+          "updatedBy": null,
+          "message": ""
+        },
+        "learnerAnalytics": {
+          "totalFocusMinutes": 0,
+          "completedTaskCount": 0,
+          "sosTodayCount": 0,
+          "lastActiveAt": "2026-04-04T05:08:24.553Z"
+        }
+      },
+      "updatedAt": "2026-04-04T05:08:24.556Z",
+      "learnerCode": "WKGF2D29",
+      "linkedLearnerIds": []
+    },
+    {
+      "id": "usr_fabeb17f-f1cf-4a0d-b5ff-d45050410830",
+      "name": "shubham saurav",
+      "email": "shubhamsaurav2264@gmail.com",
+      "passwordHash": "$2a$10$4g/KDRt37QR3y6jZSoksgec45zEU2V5WizZ3fM7ZzfubigBhdcBJO",
+      "authProvider": "local",
+      "createdAt": "2026-04-03T07:27:21.287Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false
+      },
+      "updatedAt": "2026-04-03T07:27:21.287Z"
+    },
+    {
+      "id": "usr_5542ff8b-ca0f-4c95-91ec-3b8d4f204315",
+      "name": "Learner Test",
+      "email": "learner_1775223826130@example.com",
+      "passwordHash": "$2a$10$Z9xgRuby/5GmiUjZiADjDOBdiIDcf0v39OB4AlDRiLco6hL5M4EKS",
+      "authProvider": "local",
+      "createdAt": "2026-04-03T13:44:17.889Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false
+      },
+      "updatedAt": "2026-04-03T13:44:17.889Z"
+    },
+    {
+      "id": "usr_fc5160b4-33c9-44f6-bca8-05465c82ad9c",
+      "name": "Wellwisher Test",
+      "email": "well_1775223826130@example.com",
+      "passwordHash": "$2a$10$apzPiO6pJ/PjCtExNQEPMONVFFHOQpVipYfKtzYJkwqdNAQ4ebule",
+      "authProvider": "local",
+      "createdAt": "2026-04-03T13:44:17.953Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false
+      },
+      "updatedAt": "2026-04-03T13:44:17.954Z"
+    },
+    {
+      "id": "usr_8734ff86-abf9-4f65-aeea-5bb70bb5b276",
+      "name": "Learner Test",
+      "email": "learner_1775223968358@example.com",
+      "role": "learner",
+      "linkedWellwisherId": "usr_4320238a-1b97-4257-a849-ea7a50815d18",
+      "passwordHash": "$2a$10$cHXphiftt/d5m5NhRGeAde1N4ObUZb7B1kPCWe.2iE8LPfh6bU8AK",
+      "authProvider": "local",
+      "createdAt": "2026-04-03T13:46:08.484Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false,
+        "managedFocus": {
+          "status": "idle",
+          "durationMinutes": 45,
+          "pin": null,
+          "startedAt": null,
+          "updatedAt": null,
+          "updatedBy": null,
+          "message": ""
+        },
+        "learnerAnalytics": {
+          "totalFocusMinutes": 0,
+          "completedTaskCount": 1,
+          "sosTodayCount": 3,
+          "lastActiveAt": "2026-04-03T13:46:08.569Z"
+        }
+      },
+      "updatedAt": "2026-04-03T13:46:08.569Z"
+    },
+    {
+      "id": "usr_4320238a-1b97-4257-a849-ea7a50815d18",
+      "name": "Wellwisher Test",
+      "email": "well_1775223968358@example.com",
+      "role": "wellwisher",
+      "linkedLearnerIds": [
+        "usr_8734ff86-abf9-4f65-aeea-5bb70bb5b276"
+      ],
+      "passwordHash": "$2a$10$GXvmLhWkGB4mlYQWkBkG2eduj/PLO/LCtBNJiMJY0c4r2/OFh0Z8.",
+      "authProvider": "local",
+      "createdAt": "2026-04-03T13:46:08.548Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false
+      },
+      "updatedAt": "2026-04-03T13:46:08.551Z"
+    },
+    {
+      "id": "usr_8b2d1339-f7c5-4710-8640-90c97a05095b",
+      "name": "Learner Test",
+      "email": "learner_1775224025538@example.com",
+      "role": "learner",
+      "linkedWellwisherId": "usr_728a27bb-11f7-49f4-a056-4d0e8aaeac54",
+      "passwordHash": "$2a$10$gNlKLbmGChcVsLc8AKQhFueAkENsR5rtkp2u.NRsXlndy9QXcMmTW",
+      "authProvider": "local",
+      "createdAt": "2026-04-03T13:47:05.647Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false,
+        "managedFocus": {
+          "status": "idle",
+          "durationMinutes": 45,
+          "pin": null,
+          "startedAt": null,
+          "updatedAt": null,
+          "updatedBy": null,
+          "message": ""
+        },
+        "learnerAnalytics": {
+          "totalFocusMinutes": 0,
+          "completedTaskCount": 1,
+          "sosTodayCount": 3,
+          "lastActiveAt": "2026-04-03T13:47:05.741Z"
+        }
+      },
+      "updatedAt": "2026-04-03T13:47:05.741Z"
+    },
+    {
+      "id": "usr_728a27bb-11f7-49f4-a056-4d0e8aaeac54",
+      "name": "Wellwisher Test",
+      "email": "well_1775224025538@example.com",
+      "role": "wellwisher",
+      "linkedLearnerIds": [
+        "usr_8b2d1339-f7c5-4710-8640-90c97a05095b"
+      ],
+      "passwordHash": "$2a$10$/y2S0eLCr4h1fLsv03/7pufdhSIHYTXgPHvij18GoXT5Xq7FCxn5q",
+      "authProvider": "local",
+      "createdAt": "2026-04-03T13:47:05.718Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false
+      },
+      "updatedAt": "2026-04-03T13:47:05.722Z"
+    },
+    {
+      "id": "usr_ec93f4e2-cd4f-47f3-b660-19f0f899def1",
+      "name": "Team Work",
+      "email": "teamwork.bs2027@gmail.com",
+      "role": "learner",
+      "linkedWellwisherId": "usr_4c51eb79-cce0-4f11-aecd-aefb8e2e1a13",
+      "authProvider": "google",
+      "createdAt": "2026-04-03T17:44:37.172Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false,
+        "managedFocus": {
+          "status": "idle",
+          "durationMinutes": 45,
+          "pin": null,
+          "startedAt": null,
+          "updatedAt": null,
+          "updatedBy": null,
+          "message": ""
+        },
+        "learnerAnalytics": {
+          "totalFocusMinutes": 0,
+          "completedTaskCount": 2,
+          "sosTodayCount": 2,
+          "lastActiveAt": "2026-04-04T05:41:52.412Z"
+        }
+      },
+      "updatedAt": "2026-04-04T05:41:52.424Z",
+      "learnerCode": "9E75SHBT",
+      "linkedLearnerIds": [],
+      "subscription": {
+        "tier": "premium",
+        "status": "active",
+        "planKey": "premium-monthly",
+        "planLabel": "Premium Monthly",
+        "interval": "month",
+        "currency": "INR",
+        "amount": 50,
+        "provider": "razorpay",
+        "currentPeriodEnd": "2026-05-04T05:41:24.401Z",
+        "purchasedAt": "2026-04-04T05:41:24.401Z",
+        "razorpayOrderId": "order_SZIt4sr5SiQfjS",
+        "razorpayPaymentId": "pay_SZItUWY64QoMkZ",
+        "lastOrderId": "order_SZIt4sr5SiQfjS",
+        "lastVerifiedAt": "2026-04-04T05:41:24.403Z",
+        "lastSyncedAt": "2026-04-04T05:41:24.403Z"
+      }
+    },
+    {
+      "id": "usr_4c51eb79-cce0-4f11-aecd-aefb8e2e1a13",
+      "name": "Shubham Saurav",
+      "email": "shubhamsaurav1979@gmail.com",
+      "role": "wellwisher",
+      "linkedLearnerIds": [
+        "usr_ec93f4e2-cd4f-47f3-b660-19f0f899def1"
+      ],
+      "passwordHash": "$2a$10$t4rMMc9d7SJCNUk6oLpcB.tjG/houLHIN.2I5Sde7/v5dsRW.p2sG",
+      "authProvider": "google",
+      "createdAt": "2026-04-03T18:03:41.222Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false
+      },
+      "updatedAt": "2026-04-03T21:04:07.653Z"
+    },
+    {
+      "id": "usr_272285f8-d88c-4629-a599-81c2ffd3d43b",
+      "name": "SOS Learner",
+      "email": "learner_1775246829177@test.local",
+      "role": "learner",
+      "learnerCode": "EVE37S7S",
+      "linkedWellwisherId": "usr_6f397729-a933-4703-ba4d-5af89e26b16e",
+      "passwordHash": "$2a$10$LE8HwK9HjkI2ZXHaV7BRXuHgDDruMKdsBlgdxLlW3QYBybj7J9kii",
+      "authProvider": "local",
+      "createdAt": "2026-04-03T20:07:09.285Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false,
+        "managedFocus": {
+          "status": "idle",
+          "durationMinutes": 45,
+          "pin": null,
+          "startedAt": null,
+          "updatedAt": null,
+          "updatedBy": null,
+          "message": ""
+        },
+        "learnerAnalytics": {
+          "totalFocusMinutes": 0,
+          "completedTaskCount": 0,
+          "sosTodayCount": 1,
+          "lastActiveAt": "2026-04-03T20:07:09.357Z"
+        }
+      },
+      "updatedAt": "2026-04-03T20:07:09.357Z"
+    },
+    {
+      "id": "usr_6f397729-a933-4703-ba4d-5af89e26b16e",
+      "name": "SOS Wellwisher",
+      "email": "well_1775246829177@test.local",
+      "role": "wellwisher",
+      "linkedLearnerIds": [
+        "usr_272285f8-d88c-4629-a599-81c2ffd3d43b"
+      ],
+      "passwordHash": "$2a$10$BIQjqJhxBH4I16mLmkHb5OuHNdp.xgpEJ9u99KOo4m.oPYxynMO5C",
+      "authProvider": "local",
+      "createdAt": "2026-04-03T20:07:09.353Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false
+      },
+      "updatedAt": "2026-04-03T20:07:09.353Z"
+    },
+    {
+      "id": "usr_65939f1c-9156-4aa0-9a4b-ca362b08ab17",
+      "name": "L",
+      "email": "l_1775248147154@t.local",
+      "role": "learner",
+      "learnerCode": "3UJ33VYX",
+      "linkedWellwisherId": "usr_a28ff6bd-6a24-4741-894f-03ce990ce459",
+      "passwordHash": "$2a$10$R9xs009B9c3RXZJQD/UdT.thRGE.nPooIS70WT12o.xo9pP6PnDlO",
+      "authProvider": "local",
+      "createdAt": "2026-04-03T20:29:07.250Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false
+      },
+      "updatedAt": "2026-04-03T20:29:07.317Z"
+    },
+    {
+      "id": "usr_a28ff6bd-6a24-4741-894f-03ce990ce459",
+      "name": "W",
+      "email": "w_1775248147154@t.local",
+      "role": "wellwisher",
+      "linkedLearnerIds": [
+        "usr_65939f1c-9156-4aa0-9a4b-ca362b08ab17"
+      ],
+      "passwordHash": "$2a$10$bWKiYY6OehghaUV41NRf5.UQdrFcH0DNtIyqrmEXa.Dkzvcw9DEEK",
+      "authProvider": "local",
+      "createdAt": "2026-04-03T20:29:07.317Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false
+      },
+      "updatedAt": "2026-04-03T20:29:07.317Z"
+    },
+    {
+      "id": "usr_d861bce2-1c7b-42de-b9d7-02b8a1517ad4",
+      "name": "L",
+      "email": "l_1775248185534@t.local",
+      "role": "learner",
+      "learnerCode": "U5ZEVZNV",
+      "linkedWellwisherId": "usr_001ff072-2e55-4604-a559-b9eb44890ca8",
+      "passwordHash": "$2a$10$XjWtCFB6voy.yiTKkfSCaOlDgcuVTtBEcdtvJVAZ/.OQ64s2TIMom",
+      "authProvider": "local",
+      "createdAt": "2026-04-03T20:29:54.665Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false
+      },
+      "updatedAt": "2026-04-03T20:29:54.758Z"
+    },
+    {
+      "id": "usr_001ff072-2e55-4604-a559-b9eb44890ca8",
+      "name": "W",
+      "email": "w_1775248185534@t.local",
+      "role": "wellwisher",
+      "linkedLearnerIds": [
+        "usr_d861bce2-1c7b-42de-b9d7-02b8a1517ad4"
+      ],
+      "passwordHash": "$2a$10$vmuSgfMTJ6bawq53woZDWOZSMJHVcx1vQ6Nrs6RwhAgaKfswMuO8i",
+      "authProvider": "local",
+      "createdAt": "2026-04-03T20:29:54.756Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false
+      },
+      "updatedAt": "2026-04-03T20:29:54.756Z"
+    },
+    {
+      "id": "usr_d0cbfa2b-78e9-4c59-b3d1-c6c9217bf96f",
+      "name": "Madhvi",
+      "email": "manshu@gmail.com",
+      "role": "learner",
+      "learnerCode": "GAB4QUTD",
+      "linkedWellwisherId": null,
+      "passwordHash": "$2a$10$W4OhOcSAAfd4BnCcY9aNcOa9iQOj8Vc/gIY4QDplD3RbhuKSg5uiy",
+      "authProvider": "local",
+      "createdAt": "2026-04-08T17:20:53.114Z",
+      "preferences": {
+        "theme": "light",
+        "focusMode": false,
+        "managedFocus": {
+          "status": "idle",
+          "durationMinutes": 45,
+          "pin": null,
+          "startedAt": null,
+          "updatedAt": null,
+          "updatedBy": null,
+          "message": ""
+        },
+        "learnerAnalytics": {
+          "totalFocusMinutes": 0,
+          "completedTaskCount": 0,
+          "sosTodayCount": 0,
+          "lastActiveAt": "2026-04-08T18:29:59.742Z"
+        }
+      },
+      "updatedAt": "2026-04-08T18:29:59.750Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task_74873827-2ad2-4f1b-beaa-0cea596d2406",
+      "learnerId": "usr_8734ff86-abf9-4f65-aeea-5bb70bb5b276",
+      "assignedBy": "usr_4320238a-1b97-4257-a849-ea7a50815d18",
+      "title": "Complete algebra sheet",
+      "details": "Solve Q1-Q15",
+      "dueAt": null,
+      "proofRequired": true,
+      "status": "approved",
+      "createdAt": "2026-04-03T13:46:08.553Z",
+      "updatedAt": "2026-04-03T13:46:08.569Z",
+      "lastSubmissionId": "sub_f8eb69d0-e050-4322-ac8f-34b8c58008a0"
+    },
+    {
+      "id": "task_30f0979d-14ed-4e7b-9235-e1dc11bede12",
+      "learnerId": "usr_8b2d1339-f7c5-4710-8640-90c97a05095b",
+      "assignedBy": "usr_728a27bb-11f7-49f4-a056-4d0e8aaeac54",
+      "title": "Complete algebra sheet",
+      "details": "Solve Q1-Q15",
+      "dueAt": null,
+      "proofRequired": true,
+      "status": "approved",
+      "createdAt": "2026-04-03T13:47:05.725Z",
+      "updatedAt": "2026-04-03T13:47:05.741Z",
+      "lastSubmissionId": "sub_f435ffec-1d54-4033-8308-184d1ea0e944"
+    },
+    {
+      "id": "task_995d5731-f9cc-4041-af49-45322e8b88e6",
+      "learnerId": "usr_ec93f4e2-cd4f-47f3-b660-19f0f899def1",
+      "assignedBy": "usr_4c51eb79-cce0-4f11-aecd-aefb8e2e1a13",
+      "title": "maths assignment",
+      "details": "chapter 2 q. no. 2,3,5,6,8",
+      "dueAt": "2026-04-03T23:35",
+      "proofRequired": true,
+      "durationMinutes": 74,
+      "status": "approved",
+      "createdAt": "2026-04-03T18:05:35.022Z",
+      "updatedAt": "2026-04-03T18:08:45.723Z",
+      "lastSubmissionId": "sub_1bc2a7bd-132e-4d70-8094-ac992abda0ad"
+    },
+    {
+      "id": "task_8ae60517-4624-49b2-913d-58e30fbf58eb",
+      "learnerId": "usr_ec93f4e2-cd4f-47f3-b660-19f0f899def1",
+      "assignedBy": "usr_4c51eb79-cce0-4f11-aecd-aefb8e2e1a13",
+      "title": "science project",
+      "details": "quuestion 2,4,7",
+      "dueAt": "2026-04-04T02:31",
+      "proofRequired": true,
+      "durationMinutes": 46,
+      "status": "review-needed",
+      "createdAt": "2026-04-03T21:01:52.061Z",
+      "updatedAt": "2026-04-03T21:03:54.994Z",
+      "lastSubmissionId": "sub_cdc87753-f66d-4437-b2ae-69bdb5fea6bd"
+    }
+  ],
+  "sosRequests": [
+    {
+      "id": "sos_7525f616-ba88-4a82-8ab0-6778aa7bac09",
+      "learnerId": "usr_8734ff86-abf9-4f65-aeea-5bb70bb5b276",
+      "wellwisherId": "usr_4320238a-1b97-4257-a849-ea7a50815d18",
+      "reason": "Need help understanding chapter 3",
+      "createdAt": "2026-04-03T13:46:08.557Z",
+      "status": "open"
+    },
+    {
+      "id": "sos_1138fd2c-9509-49d2-b78d-95714219b4a0",
+      "learnerId": "usr_8734ff86-abf9-4f65-aeea-5bb70bb5b276",
+      "wellwisherId": "usr_4320238a-1b97-4257-a849-ea7a50815d18",
+      "reason": "Still stuck on formulas",
+      "createdAt": "2026-04-03T13:46:08.559Z",
+      "status": "open"
+    },
+    {
+      "id": "sos_c0ae56be-74d2-427c-bbba-50c758326b90",
+      "learnerId": "usr_8734ff86-abf9-4f65-aeea-5bb70bb5b276",
+      "wellwisherId": "usr_4320238a-1b97-4257-a849-ea7a50815d18",
+      "reason": "Need break extension",
+      "createdAt": "2026-04-03T13:46:08.560Z",
+      "status": "open"
+    },
+    {
+      "id": "sos_25d3cb32-5c08-4140-abdb-211d80c727a3",
+      "learnerId": "usr_8b2d1339-f7c5-4710-8640-90c97a05095b",
+      "wellwisherId": "usr_728a27bb-11f7-49f4-a056-4d0e8aaeac54",
+      "reason": "SOS #1",
+      "createdAt": "2026-04-03T13:47:05.730Z",
+      "status": "open"
+    },
+    {
+      "id": "sos_af27638b-88c7-4501-ba43-815e27cd794e",
+      "learnerId": "usr_8b2d1339-f7c5-4710-8640-90c97a05095b",
+      "wellwisherId": "usr_728a27bb-11f7-49f4-a056-4d0e8aaeac54",
+      "reason": "SOS #2",
+      "createdAt": "2026-04-03T13:47:05.732Z",
+      "status": "open"
+    },
+    {
+      "id": "sos_b53da826-f127-4f6a-af07-680e4bef4e46",
+      "learnerId": "usr_8b2d1339-f7c5-4710-8640-90c97a05095b",
+      "wellwisherId": "usr_728a27bb-11f7-49f4-a056-4d0e8aaeac54",
+      "reason": "SOS #3",
+      "createdAt": "2026-04-03T13:47:05.733Z",
+      "status": "open"
+    },
+    {
+      "id": "sos_cff9377e-749e-4fc3-a6be-c0baf88e167b",
+      "learnerId": "usr_ec93f4e2-cd4f-47f3-b660-19f0f899def1",
+      "wellwisherId": "usr_4c51eb79-cce0-4f11-aecd-aefb8e2e1a13",
+      "reason": "i need to go tution",
+      "createdAt": "2026-04-03T19:53:19.407Z",
+      "status": "open"
+    },
+    {
+      "id": "sos_00ad54f8-487e-4f91-9d26-c9a1d096d5fc",
+      "learnerId": "usr_272285f8-d88c-4629-a599-81c2ffd3d43b",
+      "wellwisherId": "usr_6f397729-a933-4703-ba4d-5af89e26b16e",
+      "reason": "Need exit from fullscreen focus for urgent call (1775246829177)",
+      "createdAt": "2026-04-03T20:07:09.356Z",
+      "status": "open"
+    },
+    {
+      "id": "sos_e1a4d803-3160-4c31-9fea-233c5103eeb8",
+      "learnerId": "usr_ec93f4e2-cd4f-47f3-b660-19f0f899def1",
+      "wellwisherId": "usr_4c51eb79-cce0-4f11-aecd-aefb8e2e1a13",
+      "reason": "i want to play gaim",
+      "createdAt": "2026-04-03T21:03:31.707Z",
+      "status": "open"
+    }
+  ],
+  "taskSubmissions": [
+    {
+      "id": "sub_f8eb69d0-e050-4322-ac8f-34b8c58008a0",
+      "taskId": "task_74873827-2ad2-4f1b-beaa-0cea596d2406",
+      "learnerId": "usr_8734ff86-abf9-4f65-aeea-5bb70bb5b276",
+      "notes": "Completed algebra sheet Q1 to Q15 with steps.",
+      "proofFiles": [],
+      "aiReview": {
+        "score": 70,
+        "verdict": "likely-complete",
+        "summary": "The submission includes task-aligned notes and enough proof to mark it as likely complete.",
+        "matchedKeywords": [
+          "complete",
+          "algebra",
+          "sheet"
+        ]
+      },
+      "submittedAt": "2026-04-03T13:46:08.567Z"
+    },
+    {
+      "id": "sub_f435ffec-1d54-4033-8308-184d1ea0e944",
+      "taskId": "task_30f0979d-14ed-4e7b-9235-e1dc11bede12",
+      "learnerId": "usr_8b2d1339-f7c5-4710-8640-90c97a05095b",
+      "notes": "Completed algebra sheet Q1 to Q15 with steps.",
+      "proofFiles": [],
+      "aiReview": {
+        "score": 70,
+        "verdict": "likely-complete",
+        "summary": "The submission includes task-aligned notes and enough proof to mark it as likely complete.",
+        "matchedKeywords": [
+          "complete",
+          "algebra",
+          "sheet"
+        ]
+      },
+      "submittedAt": "2026-04-03T13:47:05.738Z"
+    },
+    {
+      "id": "sub_1bc2a7bd-132e-4d70-8094-ac992abda0ad",
+      "taskId": "task_995d5731-f9cc-4041-af49-45322e8b88e6",
+      "learnerId": "usr_ec93f4e2-cd4f-47f3-b660-19f0f899def1",
+      "notes": "",
+      "proofFiles": [
+        {
+          "name": "1775239661792-merged-1775213377574.pdf",
+          "originalName": "merged-1775213377574.pdf",
+          "size": 303873,
+          "uploadedAt": "2026-04-03T18:07:41.795Z",
+          "url": "http://localhost:5001/uploads/1775239661792-merged-1775213377574.pdf"
+        }
+      ],
+      "aiReview": {
+        "score": 15,
+        "verdict": "incomplete",
+        "summary": "The submission does not contain enough task-specific evidence yet.",
+        "matchedKeywords": []
+      },
+      "submittedAt": "2026-04-03T18:07:41.836Z"
+    },
+    {
+      "id": "sub_cdc87753-f66d-4437-b2ae-69bdb5fea6bd",
+      "taskId": "task_8ae60517-4624-49b2-913d-58e30fbf58eb",
+      "learnerId": "usr_ec93f4e2-cd4f-47f3-b660-19f0f899def1",
+      "notes": "",
+      "proofFiles": [
+        {
+          "name": "1775250234947-b5579a3f-5009-4ddb-9210-a8719a531ab2.jpeg",
+          "originalName": "b5579a3f-5009-4ddb-9210-a8719a531ab2.jpeg",
+          "size": 111200,
+          "uploadedAt": "2026-04-03T21:03:54.951Z",
+          "url": "http://localhost:5001/uploads/1775250234947-b5579a3f-5009-4ddb-9210-a8719a531ab2.jpeg"
+        }
+      ],
+      "aiReview": {
+        "score": 15,
+        "verdict": "incomplete",
+        "summary": "The submission does not contain enough task-specific evidence yet.",
+        "matchedKeywords": []
+      },
+      "submittedAt": "2026-04-03T21:03:54.993Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg_0b53ded5-a37f-4348-9576-81026e3aa234",
+      "senderId": "usr_4c51eb79-cce0-4f11-aecd-aefb8e2e1a13",
+      "receiverId": "usr_ec93f4e2-cd4f-47f3-b660-19f0f899def1",
+      "text": "hiii done this assignment",
+      "createdAt": "2026-04-03T18:09:43.605Z"
+    },
+    {
+      "id": "msg_2f7280cc-0eaa-4819-88b4-4c87bc8904c0",
+      "senderId": "usr_65939f1c-9156-4aa0-9a4b-ca362b08ab17",
+      "receiverId": "usr_a28ff6bd-6a24-4741-894f-03ce990ce459",
+      "text": "hello from learner",
+      "createdAt": "2026-04-03T20:29:07.320Z"
+    },
+    {
+      "id": "msg_ec65d7eb-3930-4470-8186-3b7a9c1fb3de",
+      "senderId": "usr_4c51eb79-cce0-4f11-aecd-aefb8e2e1a13",
+      "receiverId": "usr_ec93f4e2-cd4f-47f3-b660-19f0f899def1",
+      "text": "hiii comp the science project on time",
+      "createdAt": "2026-04-03T21:02:40.291Z"
+    }
+  ]
+}

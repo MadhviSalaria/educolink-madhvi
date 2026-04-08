@@ -1,0 +1,67 @@
+.compact-clock {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid rgba(87, 77, 179, 0.14);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(246, 247, 255, 0.9));
+  box-shadow: 0 6px 18px rgba(64, 78, 132, 0.1);
+}
+
+.compact-clock-sep {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4f5fbf;
+  transform: translateY(-0.1rem);
+}
+
+.compact-clock-sep-soft {
+  opacity: 0.6;
+}
+
+.compact-clock-cell {
+  min-width: 2.2rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 0.6rem;
+  background: linear-gradient(160deg, #eef2ff, #dde7ff);
+  border: 1px solid rgba(94, 114, 228, 0.2);
+  text-align: center;
+}
+
+.compact-clock-cell.is-subtle {
+  background: linear-gradient(160deg, #f7faff, #eef3ff);
+}
+
+.compact-clock-value {
+  font-family: 'JetBrains Mono', 'Menlo', monospace;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #2b3d8f;
+}
+
+.compact-clock-label {
+  margin-top: 0.15rem;
+  font-size: 0.52rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: #5f74d3;
+}
+
+@media (max-width: 768px) {
+  .compact-clock {
+    padding: 0.28rem 0.38rem;
+    gap: 0.28rem;
+  }
+
+  .compact-clock-cell {
+    min-width: 1.95rem;
+    padding: 0.2rem 0.3rem;
+  }
+
+  .compact-clock-value {
+    font-size: 0.82rem;
+  }
+}

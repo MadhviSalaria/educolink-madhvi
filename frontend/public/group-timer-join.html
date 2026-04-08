@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduLink Group Timer</title>
+    <style>
+      :root {
+        --bg: #f3f4f7;
+        --card: #f7f7fa;
+        --line: #e2e4ea;
+        --text: #1f2937;
+        --muted: #7b8394;
+        --orange: #f28a37;
+        --orange-soft: #fff0e2;
+        --danger: #c94343;
+        --ok: #0f766e;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      .layout {
+        max-width: 1200px;
+        margin: 24px auto;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        overflow: hidden;
+        background: #fff;
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+      }
+
+      .left {
+        background: #f4f4f7;
+        padding: 28px;
+        border-right: 1px solid var(--line);
+      }
+
+      .right {
+        background: #f7f7fa;
+        padding: 18px 14px;
+      }
+
+      .timer-card {
+        background: #f7f7fa;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 22px;
+        max-width: 540px;
+        margin: 0 auto;
+      }
+
+      .title {
+        margin: 0 0 14px;
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .row { display: flex; gap: 10px; align-items: center; }
+
+      .mode-tabs { margin-bottom: 14px; }
+
+      .tab-btn {
+        border: 1px solid #e8d8c7;
+        background: #f7f3ee;
+        border-radius: 12px;
+        color: #4b5563;
+        padding: 8px 14px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .tab-btn.active {
+        background: var(--orange);
+        border-color: var(--orange);
+        color: #fff;
+      }
+
+      .join-row {
+        margin-bottom: 12px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+      }
+
+      input {
+        width: 100%;
+        border: 1px solid #d7dbe3;
+        border-radius: 12px;
+        padding: 11px 12px;
+        font-size: 15px;
+        background: #fff;
+      }
+
+      button {
+        border: 0;
+        border-radius: 12px;
+        padding: 10px 14px;
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      #joinBtn, #startBtn {
+        background: var(--orange);
+        color: #fff;
+      }
+
+      #startBtn:disabled,
+      #resetBtn:disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+      }
+
+      #pauseBtn,
+      #resetBtn,
+      #setTimerBtn {
+        background: #edf0f5;
+        color: #4b5563;
+        border: 1px solid #d8dde6;
+      }
+
+      .message {
+        min-height: 19px;
+        margin: 8px 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--ok);
+      }
+
+      .danger { color: var(--danger); }
+
+      .status {
+        border: 1px solid #ebd4db;
+        border-radius: 12px;
+        background: #f8edf1;
+        padding: 12px 14px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+      }
+
+      .status .meta {
+        font-size: 30px;
+        font-weight: 800;
+        color: #933c5f;
+        letter-spacing: 1px;
+      }
+
+      .room-text { font-size: 28px; font-weight: 800; margin: 2px 0 6px; }
+
+      .badge {
+        display: inline-block;
+        margin-top: 8px;
+        background: #f1efe8;
+        border: 1px solid #ddd8cc;
+        border-radius: 999px;
+        padding: 5px 10px;
+        font-size: 12px;
+        color: #5f5b4f;
+      }
+
+      .custom-grid {
+        margin-top: 14px;
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+        gap: 10px;
+      }
+
+      .controls {
+        margin-top: 12px;
+        display: flex;
+        gap: 10px;
+      }
+
+      .control-note {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .right h3 {
+        margin: 4px 0 12px;
+      }
+
+      .search-row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .task-card {
+        border: 1px solid #dfe3ea;
+        background: #f4f5f8;
+        border-radius: 14px;
+        padding: 14px;
+        margin-bottom: 10px;
+      }
+
+      .task-title { font-weight: 700; margin-bottom: 6px; }
+
+      .task-sub { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+
+      .task-btn {
+        width: 100%;
+        background: var(--orange);
+        color: #fff;
+        text-align: center;
+      }
+
+      @media (max-width: 980px) {
+        .layout { grid-template-columns: 1fr; }
+        .left { border-right: 0; border-bottom: 1px solid var(--line); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <section class="left">
+        <div class="timer-card">
+          <h2 class="title">Group Study Timer</h2>
+
+          <div class="row mode-tabs">
+            <button id="focusTab" class="tab-btn active" type="button">Focus</button>
+            <button id="shortBreakTab" class="tab-btn" type="button">Short Break</button>
+            <button id="longBreakTab" class="tab-btn" type="button">Long Break</button>
+          </div>
+
+          <div class="join-row">
+            <input id="roomInput" type="text" placeholder="Enter Room Code" />
+            <button id="joinBtn" type="button">Join Room</button>
+          </div>
+          <p id="statusMessage" class="message" aria-live="polite"></p>
+
+          <section id="roomSection" class="status" style="display:none;">
+            <div>
+              <div style="color:#6f7284;">Room Code:</div>
+              <div id="roomName" class="room-text">-</div>
+              <div style="color:#6f7284;">Phase: <span id="phaseDisplay" style="color:#933c5f;font-weight:700;">Focus</span></div>
+            </div>
+            <div id="timerDisplay" class="meta">25:00</div>
+          </section>
+
+          <div id="roleBadge" class="badge" style="display:none;">Role: Member</div>
+
+          <div class="custom-grid">
+            <input id="focusInput" type="number" min="1" max="180" value="25" />
+            <input id="breakInput" type="number" min="1" max="60" value="5" />
+            <button id="setTimerBtn" type="button">Set Timer</button>
+          </div>
+
+          <div class="controls">
+            <button id="startBtn" type="button">Start</button>
+            <button id="pauseBtn" type="button">Pause</button>
+            <button id="resetBtn" type="button">Reset</button>
+          </div>
+
+          <p id="permissionMessage" class="control-note"></p>
+        </div>
+      </section>
+
+      <aside class="right">
+        <h3>Tasks</h3>
+        <div class="search-row">
+          <input type="text" placeholder="Search Task.." />
+          <button type="button">+ Add</button>
+        </div>
+
+        <div class="task-card">
+          <div class="task-title">Complete Project Proposal</div>
+          <div class="task-sub">Finish the Q1 project proposal for client review</div>
+          <button class="task-btn" type="button">Start Timer</button>
+        </div>
+
+        <div class="task-card">
+          <div class="task-title">Review Pull Requests</div>
+          <div class="task-sub">Review 3 pending PRs from the team</div>
+          <button class="task-btn" type="button">Start Timer</button>
+        </div>
+
+        <div class="task-card">
+          <div class="task-title">Study React Performance</div>
+          <div class="task-sub">Learn about memo, useMemo, and useCallback</div>
+          <button class="task-btn" type="button">Start Timer</button>
+        </div>
+      </aside>
+    </div>
+
+    <script src="./group-timer-join.js"></script>
+  </body>
+</html>

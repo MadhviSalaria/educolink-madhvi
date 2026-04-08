@@ -1,0 +1,39 @@
+<svg viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg">
+  <!-- Graduation Cap -->
+  <g id="cap">
+    <path d="M200 40L240 60L240 70L160 70L160 60Z" fill="#1a3a7a" />
+    <rect x="185" y="70" width="30" height="15" fill="#1a3a7a" />
+    <circle cx="200" cy="77.5" r="20" fill="#1a3a7a" />
+  </g>
+
+  <!-- Book Layers (Green) -->
+  <g id="book-layers">
+    <path d="M180 85L220 85L225 95L175 95Z" fill="#2ecc71" opacity="0.8" />
+    <path d="M175 98L225 98L220 108L180 108Z" fill="#27ae60" />
+  </g>
+
+  <!-- Left Circle (Blue) -->
+  <circle cx="140" cy="210" r="70" fill="none" stroke="#1a3a7a" stroke-width="18" />
+  <path d="M 140 140 A 70 70 0 0 1 210 210" fill="none" stroke="#1a3a7a" stroke-width="18" stroke-linecap="round" />
+
+  <!-- Right Circle (Green) -->
+  <circle cx="260" cy="210" r="70" fill="none" stroke="#2ecc71" stroke-width="18" />
+  <path d="M 260 140 A 70 70 0 0 0 190 210" fill="none" stroke="#2ecc71" stroke-width="18" stroke-linecap="round" />
+
+  <!-- Overlap Effect -->
+  <circle cx="140" cy="210" r="70" fill="none" stroke="#1a3a7a" stroke-width="8" opacity="0.3" />
+  <circle cx="260" cy="210" r="70" fill="none" stroke="#2ecc71" stroke-width="8" opacity="0.3" />
+
+  <!-- Text: EDUCOLINK -->
+  <text x="200" y="380" font-family="Arial, sans-serif" font-size="54" font-weight="bold" text-anchor="middle" fill="#1a3a7a">
+    Educo
+  </text>
+  <text x="295" y="380" font-family="Arial, sans-serif" font-size="54" font-weight="bold" text-anchor="start" fill="#2ecc71">
+    Link
+  </text>
+
+  <!-- Tagline -->
+  <text x="200" y="420" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333" font-weight="500">
+    Where Education Meets Intelligence
+  </text>
+</svg>
